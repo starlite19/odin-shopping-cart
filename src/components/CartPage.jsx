@@ -1,10 +1,9 @@
 import NavBar from "./NavBar.jsx";
-
-export default function ShopPage() {
+export default function CartPage() {
   return (
     <div>
       <NavBar />
-      <div>Shop Page</div>
+      <div>Cart Page</div>
     </div>
   );
 }
