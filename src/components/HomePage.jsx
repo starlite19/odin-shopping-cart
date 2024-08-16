@@ -9,8 +9,8 @@ export default function HomePage() {
       <div id="home-content">
         <div id="intro">Welcome to</div>
         <div id="store-name">The Store</div>
-        <div class="subtitle">THE store for all your needs</div>
-        <div class="button">
+        <div className="subtitle">THE store for all your needs</div>
+        <div className="button">
           <Link to="/products">SHOP NOW</Link>
         </div>
       </div>

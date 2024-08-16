@@ -1,0 +1,9 @@
+.left img {
+    max-width: 265px;
+    max-height: 265px;
+    border-radius: 8px;
+}
+
+.item {
+    display: flex;
+}
