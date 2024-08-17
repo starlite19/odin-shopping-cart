@@ -1,7 +1,10 @@
 import "../styles/ItemPage.css";
 import { useState } from "react";
+import { useOutletContext } from "react-router-dom";
 
 export default function ItemPage({ product }) {
+  const [cart, setCart] = useOutletContext();
+
   const [quantity, setQuantity] = useState(1);
 
   function onAdd() {
@@ -10,6 +13,25 @@ export default function ItemPage({ product }) {
 
   function onMinus() {
     setQuantity(quantity - 1);
+  }
+
+  function addToCart() {
+    const cartCopy = [...cart];
+    let item = cartCopy.find((i) => i.id === product.id);
+    if (item) {
+      item.quantity += quantity;
+      setCart(cartCopy);
+    } else {
+      const newItem = {
+        id: product.id,
+        name: product.title,
+        price: product.price,
+        quantity,
+        image: product.image,
+      };
+
+      setCart([...cart, newItem]);
+    }
   }
 
   return (
@@ -26,10 +48,12 @@ export default function ItemPage({ product }) {
           <button disabled={quantity <= 1} onClick={onMinus}>
             -
           </button>
-          <input type="number" value={quantity}></input>
+          <input type="number" readOnly={true} value={quantity}></input>
           <button onClick={onAdd}>+</button>
         </div>
-        <button className="addCart">Add to Cart</button>
+        <button className="addCart" onClick={addToCart}>
+          Add to Cart
+        </button>
       </div>
     </div>
   );

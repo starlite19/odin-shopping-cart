@@ -1,9 +1,9 @@
-import NavBar from "./NavBar.jsx";
 import { useState, useEffect } from "react";
 import ProductGrid from "./ProductGrid.jsx";
 import ItemPage from "./ItemPage.jsx";
 import Loading from "./Loading.jsx";
 import { useParams } from "react-router-dom";
+import "../styles/ShopPage.css";
 
 export default function ShopPage() {
   const id = useParams().id;
@@ -21,21 +21,12 @@ export default function ShopPage() {
     return <Loading />;
   }
   if (id) {
-    return (
-      <div>
-        {console.log(products)}
-        <NavBar />
-        <ItemPage product={products[id - 1]} />
-      </div>
-    );
+    return <ItemPage product={products[id - 1]} />;
   } else {
     return (
-      <div>
-        <NavBar />
-        <div className="content">
-          <h1>Products</h1>
-          <ProductGrid products={products} />
-        </div>
+      <div className="content">
+        <h1>Products</h1>
+        <ProductGrid products={products} />
       </div>
     );
   }
