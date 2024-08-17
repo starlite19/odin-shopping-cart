@@ -6,8 +6,43 @@
 
 .item {
     display: flex;
+    margin: 100px;
+    justify-content: space-around;
+    gap: 100px;
 }
 
 .adjust {
     display: flex;
+    gap: 8px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 50%;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rating img, .addCart img {
+    width: 20px;
+    height: 20px;
+}
+
+.addCart {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
 }

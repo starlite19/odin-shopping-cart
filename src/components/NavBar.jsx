@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import "../styles/NavBar.css";
 import { useState, useEffect } from "react";
+import cartImg from "../assets/cart.svg";
+
 export default function NavBar({ cart }) {
   const [cartQuantity, setCartQuantity] = useState(0);
 
@@ -24,7 +26,12 @@ export default function NavBar({ cart }) {
             <Link to="/products">Products</Link>
           </li>
           <li>
-            <Link to="/cart">Cart: {cartQuantity}</Link>
+            <Link to="/cart">
+              <img id="cart" src={cartImg} alt="Cart: " />
+              <span className="numberCircle">
+                <span>{cartQuantity}</span>
+              </span>
+            </Link>
           </li>
         </ul>
       </div>

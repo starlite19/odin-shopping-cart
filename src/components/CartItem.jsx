@@ -29,7 +29,7 @@ export default function CartItem({ product, cart, setCart }) {
         <img src={product.image}></img>
       </div>
       <div className="right">
-        <div className="name">{product.title}</div>
+        <div className="name">{product.name}</div>
         <div className="price">${product.price}</div>
         <div className="adjust">
           <button disabled={quantity <= 1} onClick={onMinus}>

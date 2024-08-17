@@ -1,6 +1,8 @@
 import "../styles/ItemPage.css";
 import { useState } from "react";
 import { useOutletContext } from "react-router-dom";
+import starImg from "../assets/star.svg";
+import addToCartImg from "../assets/add-to-cart.svg";
 
 export default function ItemPage({ product }) {
   const [cart, setCart] = useOutletContext();
@@ -40,9 +42,15 @@ export default function ItemPage({ product }) {
         <img src={product.image}></img>
       </div>
       <div className="right">
-        <div className="name">{product.title}</div>
+        <div className="head">
+          <div className="name">{product.title}</div>
+          <div className="rating">
+            <img src={starImg} />
+            {product.rating.rate}
+          </div>
+        </div>
         <div className="desc">{product.description}</div>
-        <div className="rating">{product.rating.rate}</div>
+
         <div className="price">${product.price}</div>
         <div className="adjust">
           <button disabled={quantity <= 1} onClick={onMinus}>
@@ -52,7 +60,7 @@ export default function ItemPage({ product }) {
           <button onClick={onAdd}>+</button>
         </div>
         <button className="addCart" onClick={addToCart}>
-          Add to Cart
+          <img src={addToCartImg} /> <span>Add to Cart</span>
         </button>
       </div>
     </div>

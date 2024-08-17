@@ -12,7 +12,7 @@ export default function Summary({ cart }) {
     setSubtotal(sub.toFixed(2));
   }, [cart]);
   return (
-    <div>
+    <div id="summary">
       <h2>Order Summary</h2>
       <hr></hr>
       {cart.map((i) => (
