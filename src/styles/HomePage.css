@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'subtext';
-    src: url('./IndieFlower-Regular.ttf');
+    src: url('./fonts/IndieFlower-Regular.ttf');
 }
 
 @font-face {
     font-family: 'title';
-    src: url('./Monofett-Regular.ttf');
+    src: url('./fonts/Monofett-Regular.ttf');
 }
 
 #home-content {
@@ -14,6 +14,7 @@
     align-items: center;
     justify-content: center;
     gap: 16px;
+    height: 70vh;
 }
 
 #intro, .subtitle {
@@ -36,4 +37,14 @@
 .button a {
     color: white;
     font-size: 20px;
+}
+
+#logo {
+    font-family: 'title';
+    font-size: 30px;
+}
+
+#nav-right {
+    font-family: 'subtext';
+    font-size: 23px;
 }

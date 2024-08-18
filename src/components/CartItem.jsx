@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "../styles/CartItem.css";
 
 export default function CartItem({ product, cart, setCart }) {
   const [quantity, setQuantity] = useState(product.quantity);

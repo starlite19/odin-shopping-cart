@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'product-desc';
+    src: url('./fonts/DarkerGrotesque-VariableFont_wght.ttf');
+}
+
 .left img {
     max-width: 265px;
     max-height: 265px;
@@ -33,9 +38,11 @@
     display: flex;
     align-items: center;
     gap: 5px;
+    font-family: 'product-price';
+    font-size: 18px;
 }
 
-.rating img, .addCart img {
+.rating img, .addCart img, #checkout img {
     width: 20px;
     height: 20px;
 }
@@ -45,4 +52,25 @@
     align-items: center;
     gap: 8px;
     justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: black;
+    font-size: 15px;
+    color: white;
+}
+
+.desc {
+    font-family: 'product-desc';
+    font-size: 20px;
+}
+
+input {
+    font-family: 'product-price';
+    font-size: 15px;
+}
+
+.adjust button {
+    font-family: 'product-price';
+    font-size: 15px;
 }

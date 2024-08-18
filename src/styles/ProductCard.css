@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'product-name';
+  src: url('./fonts/EduVICWANTBeginner-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'product-price';
+  src: url('./fonts/UnicaOne-Regular.ttf');
+}
+
 .contents {
     display: flex;
     flex-direction: column;
@@ -14,7 +24,7 @@
 .card {
     border-radius: 8px;
     width: 280px;
-    height: 400px;
+    height: 420px;
 }
 
 .card {
@@ -44,4 +54,15 @@
   }
 .card:hover {
     cursor: pointer;
+}
+
+.name {
+  font-family: 'product-name';
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.price {
+  font-family: 'product-price';
+  font-size: 18px;
 }

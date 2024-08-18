@@ -1,6 +1,8 @@
 import SummaryItem from "./SummaryItem.jsx";
 import { useEffect, useState } from "react";
 import "../styles/Summary.css";
+import checkoutImg from "../assets/checkout.svg";
+
 export default function Summary({ cart }) {
   const [subtotal, setSubtotal] = useState(0);
 
@@ -20,10 +22,12 @@ export default function Summary({ cart }) {
       ))}
       <hr></hr>
       <div id="subtotal">
-        <div>Subtotal</div>
-        <div>{subtotal}</div>
+        <div className="title">Subtotal</div>
+        <div className="price">${subtotal}</div>
       </div>
-      <button id="checkout">PROCEED TO CHECKOUT</button>
+      <button id="checkout">
+        <img src={checkoutImg} /> <span>PROCEED TO CHECKOUT</span>
+      </button>
     </div>
   );
 }

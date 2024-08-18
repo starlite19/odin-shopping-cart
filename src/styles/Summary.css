@@ -1,4 +1,31 @@
 #subtotal {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+#summary h2 {
+    font-family: 'subtext';
+}
+
+.title {
+    font-family: 'subtext';
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#checkout {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: black;
+    font-size: 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#summary {
+    margin-right: 55px;
 }

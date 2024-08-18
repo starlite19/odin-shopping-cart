@@ -5,4 +5,18 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.empty {
+  font-family: 'title';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  font-size: 100px;
 }
