@@ -1,8 +1,23 @@
-# React + Vite
+# ODIN Mock Shopping Cart
+Project deployed on 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project demonstrates the concepts of building basic REACT apps using the following knowledge:
+- REACT components
+- CSS
+- HTML
+- JSX
+- useState hooks
+- useEffect hooks
+- API
+- React Routing
 
-Currently, two official plugins are available:
+Functionality:
+- Fetch and use data from an external API to display products
+- Navigate between home page, shopping page, item page, cart page, and checkout page using routing
+- Click on item to show item description and add item to cart
+- Add items to cart and display number of items in cart
+- Display summary of items, prices and total cost at checkout page
+- Can remove items from cart at checkout page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Missing functionality:
+- Checkout button does not work
